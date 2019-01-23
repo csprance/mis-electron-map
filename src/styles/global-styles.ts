@@ -14,14 +14,17 @@ export const GlobalStyles = createGlobalStyle`
     outline: 1px solid slategrey;
   }
   #App {
-  flex-grow: 1;
-  width: 100%;
-  height: 100%;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
   }
   body, html {
     background-color: ${darkDarkBlack};
     display: flex;
     flex-grow: 1; 
     height: 100%;
+  }
+  .leaflet-control-mouseposition .leaflet-control{
+    color: white !important;
   }
   `;

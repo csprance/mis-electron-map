@@ -10,10 +10,6 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   -webkit-app-region: no-drag;
 `;
-const Link = styled.a`
-  text-decoration: none;
-  color: inherit;
-`;
 
 type Props = {
   history: any; // Router
@@ -62,12 +58,6 @@ class TitleBarMenu extends React.Component<Props, State> {
           open={Boolean(anchorEl)}
           onClose={this.handleClose}
         >
-          <MenuItem onClick={() => this.props.history.push('/')}>
-            <Link href={'#'}>Switch Server</Link>
-          </MenuItem>
-          <MenuItem onClick={() => this.props.history.push('/add')}>
-            Add Server
-          </MenuItem>
           <MenuItem onClick={this.exitApp}>Exit</MenuItem>
         </Menu>
       </Wrapper>

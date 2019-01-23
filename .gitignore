@@ -2,6 +2,5 @@ node_modules
 out
 secrets.ts
 .idea
-misrcon.db
-miscreated.db
+mismap.db
 logs

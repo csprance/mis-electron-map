@@ -1,4 +1,5 @@
 import * as L from 'leaflet';
+import 'leaflet-mouse-position';
 import * as React from 'react';
 import {
   FeatureGroup,
@@ -95,11 +96,37 @@ class Map extends React.Component<Props, State> {
     super(props);
   }
 
+  componentDidMount() {
+    this.addMousePositionControlToMap();
+  }
+
   componentDidUpdate(nextProps: Props) {
     if (nextProps.showing !== this.props.showing) {
       this.mapRef.leafletElement.invalidateSize();
     }
   }
+
+  addMousePositionControlToMap = () => {
+    (L.control as any)
+      .mousePosition({
+        position: 'bottomright',
+        separator: ' : ',
+        emptyString: 'Unavailable',
+        lngFirst: true,
+        numDigits: 5,
+        lngFormatter: (x: number) =>
+          `X: ${this.mapRef.leafletElement
+            .project({ lat: 0, lng: x }, 5)
+            .x.toFixed(0)}`,
+        latFormatter: (y: number) =>
+          `Y: ${8196 -
+            this.mapRef.leafletElement
+              .project({ lat: y, lng: 0 }, 5)
+              .y.toFixed(0)}`,
+        prefix: ''
+      })
+      .addTo(this.mapRef.leafletElement);
+  };
 
   addMarker = () => {
     const { x, y } = misMapUtils.convertLatLngToVec2(

@@ -38,7 +38,7 @@ const TitleBar = () => {
     <Wrapper>
       <LeftSpacer />
       <TitleBarMenu />
-      <Title>MisRCON</Title>
+      <Title>MisMap</Title>
       <Spacer />
       <TitleBarButton type={'minimize'} />
       <TitleBarButton type={'maximize'} />

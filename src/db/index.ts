@@ -5,7 +5,7 @@ import Marker from './entities/Marker';
 export default async () => {
   const opts: ConnectionOptions = {
     type: 'sqlite',
-    database: 'misrcon.db',
+    database: 'mismap.db',
     entities: [Marker],
     synchronize: true,
     logging: false

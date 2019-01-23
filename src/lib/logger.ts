@@ -1,20 +1,9 @@
 import * as fs from 'fs';
 import * as winston from 'winston';
-import { IRCONRequest } from '../redux/rcon';
 
 if (!fs.existsSync('logs')) {
   fs.mkdirSync('logs');
 }
-export const rconLogger = winston.createLogger({
-  level: 'info',
-  format: winston.format.json(),
-  transports: [
-    new winston.transports.File({
-      filename: './logs/rcon.log',
-      level: 'info'
-    })
-  ]
-});
 
 export const logger = winston.createLogger({
   level: 'info',
@@ -42,14 +31,5 @@ if (process.env.NODE_ENV !== 'production') {
     })
   );
 }
-
-export const logRCONError = (req: IRCONRequest) => {
-  const { password, ...rest } = req;
-  rconLogger.log('info', `ERROR`, { ...rest });
-};
-export const logRCONResponse = (req: IRCONRequest) => {
-  const { password, ...rest } = req;
-  rconLogger.log('info', `SUCCESS`, { ...rest });
-};
 
 export default logger;

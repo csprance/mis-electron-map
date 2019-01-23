@@ -1,5 +1,7 @@
 /* required styles */
-
+div.leaflet-control-mouseposition.leaflet-control{
+	color: white !important;
+}
 .leaflet-pane,
 .leaflet-tile,
 .leaflet-marker-icon,

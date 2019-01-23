@@ -1,7 +1,7 @@
 {
   "name": "mis-electron-map",
   "productName": "MisMap",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Interactive Map for Miscreated game.",
   "main": "src/index.ts",
   "scripts": {
@@ -72,6 +72,7 @@
     "get-options": "^1.1.3",
     "history": "^4.7.2",
     "leaflet": "^1.3.4",
+    "leaflet-mouse-position": "^1.0.4",
     "moment": "^2.22.2",
     "moment-timezone": "^0.5.23",
     "mousetrap": "^1.6.2",
