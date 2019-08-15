@@ -13,6 +13,6 @@ Depending on the system it will install into a different default installation di
 
 | Operating System | Default Install Directory |
 | ------------- | ------------- |
-| Windows  | Users/username/ApplicationData/Local/Programs/MisMap  |
+| Windows  | Users/username/ApplicationData/Local/MisMap  |
 | Linux  | /usr/local/bin/MisMap  |
 | Mac  | ?  |
