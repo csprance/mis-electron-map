@@ -73,7 +73,7 @@
     "history": "^4.7.2",
     "leaflet": "^1.3.4",
     "leaflet-mouse-position": "^1.0.4",
-    "moment": "^2.22.2",
+    "moment": "^2.29.2",
     "moment-timezone": "^0.5.23",
     "mousetrap": "^1.6.2",
     "node-misrcon": "^1.1.2",
